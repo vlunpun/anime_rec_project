@@ -1,0 +1,35 @@
+Project: Similar Anime Recommendation System
+Problem Statement:
+The project aims to recommend anime titles similar to the user's favorite anime, making it easier for users to find new anime to watch based on their preferences.
+
+Data/Input Needed:
+
+User input: favorite anime title.
+Anime data: titles, genres, scores, and other relevant information fetched from the Jikan API.
+Target Users:
+
+Anime fans looking for recommendations similar to their favorite anime.
+Users exploring new anime titles in specific genres.
+Output for the User:
+
+List of recommended anime titles similar to the user's favorite anime.
+Details about each recommended anime, such as title, score, synopsis, and number of episodes.
+Smallest Useful Piece:
+
+A script that takes user input for their favorite anime and returns a list of recommended similar anime titles.
+How Inputs Become Outputs:
+
+User inputs their favorite anime title.
+The system fetches anime data from the Jikan API.
+The system finds anime similar to the favorite anime based on genres.
+The system outputs the recommended anime titles to the user.
+Additional Features:
+
+Allow users to save their favorite recommendations.
+Provide additional information such as airing status, release date, and studio.
+Technologies Used:
+
+Jikan API for fetching anime data.
+SQLite database for storing user preferences and anime data.
+Pandas for data manipulation.
+SQLAlchemy for database operations.
