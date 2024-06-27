@@ -84,4 +84,4 @@ Description: Gets user input for their favorite anime title.
     - Calls functions 5, 3, 4, 6 (successively)
 
 
-![Deploy Badge](https://github.com/vlunpun/anime_rec_project/actions/workflows/style.yaml/badge.svg
+![Deploy Badge](https://github.com/vlunpun/anime_rec_project/actions/workflows/style.yaml/badge.svg)
