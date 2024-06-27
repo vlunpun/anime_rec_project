@@ -3,6 +3,7 @@ import pandas as pd
 import sqlalchemy as db
 import json
 
+
 def fetch_anime_by_title(anime_title):
     """
     Fetch anime data from Jikan API by title and return the anime ID.
@@ -15,6 +16,7 @@ def fetch_anime_by_title(anime_title):
             return data
     return None
 
+
 def get_similar_anime(anime_id):
     """
     Fetch similar anime data from Jikan API by anime ID.
@@ -26,5 +28,6 @@ def get_similar_anime(anime_id):
         if data:
             print(json.dumps(data, indent=4))
     return None
+
 
 get_similar_anime(fetch_anime_by_title("One Punch Man"))
