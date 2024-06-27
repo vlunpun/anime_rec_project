@@ -1,3 +1,4 @@
+![Deploy Badge](https://github.com/vlunpun/anime_rec_project/actions/workflows/style.yaml/badge.svg)
 # Anime Recommendation Project
 
 This project fetches information about an anime and its recommendations using the Jikan API and stores the data in a SQLite database using Python.
@@ -82,6 +83,3 @@ Description: Gets user input for their favorite anime title.
 - Description: Main function to execute the steps of the project.
 - Workflow:
     - Calls functions 5, 3, 4, 6 (successively)
-
-
-![Deploy Badge](https://github.com/vlunpun/anime_rec_project/actions/workflows/style.yaml/badge.svg)
