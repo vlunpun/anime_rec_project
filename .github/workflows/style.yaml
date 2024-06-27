@@ -17,5 +17,3 @@ jobs:
 
       - name: Check Style
         run: pycodestyle --first anime_rec_project/*.py
-
-        run: pycodestyle --first anime_rec_project/*.py
