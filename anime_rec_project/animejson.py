@@ -3,8 +3,10 @@ import pandas as pd
 import sqlalchemy as db
 import json
 
-# Function to fetch anime data from Jikan API by title
 def fetch_anime_by_title(anime_title):
+    """
+    Fetch anime data from Jikan API by title and return the anime ID.
+    """
     url = f"https://api.jikan.moe/v4/anime?q={anime_title}&limit=1"
     response = requests.get(url)
     if response.status_code == 200:
@@ -13,8 +15,10 @@ def fetch_anime_by_title(anime_title):
             return data
     return None
 
-
 def get_similar_anime(anime_id):
+    """
+    Fetch similar anime data from Jikan API by anime ID.
+    """
     url = f"https://api.jikan.moe/v4/anime/{anime_id}/recommendations"
     response = requests.get(url)
     if response.status_code == 200:
