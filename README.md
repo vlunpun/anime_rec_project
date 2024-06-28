@@ -1,4 +1,5 @@
 ![Deploy Badge](https://github.com/vlunpun/anime_rec_project/actions/workflows/style.yaml/badge.svg)
+
 # Anime Recommendation Project
 
 This project fetches information about an anime and its recommendations using the Jikan API and stores the data in a SQLite database using Python.
