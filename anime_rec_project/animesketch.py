@@ -43,8 +43,7 @@ def collect_similar_anime(anime_id):
 
         df = pd.DataFrame(anime_list)
         engine = db.create_engine('sqlite:///similar_anime_database.db')
-        df.to_sql('similar_anime', con=engine, if_exists='replace', index=False
-                  )
+        df.to_sql('similar_anime', con=engine, if_exists='replace', index=False)
 
 
 def load_similar_anime():
@@ -61,8 +60,10 @@ def get_user_favorite_anime():
     Get user input for favorite anime.
     """
     while True:
-        print("\nEnter your favorite anime title:")
+        print("\nEnter your favorite anime title (or 'q' to quit):")
         user_input = input()
+        if user_input.lower() == 'q':
+            return None
         favorite_anime = get_anime_by_title(user_input)
         if favorite_anime:
             return favorite_anime
@@ -84,18 +85,22 @@ def main():
     """
     Main function to execute the steps.
     """
-    print("\nGetting user favorite anime...")
-    favorite_anime = get_user_favorite_anime()
+    while True:
+        print("\nGetting user favorite anime...")
+        favorite_anime = get_user_favorite_anime()
+        if favorite_anime is None:
+            print("\nYou chose to quit. Exiting the program. Goodbye!")
+            break
 
-    anime_id = favorite_anime['mal_id']
-    print(f"\nFetching similar anime for '{favorite_anime['title']}'...")
-    collect_similar_anime(anime_id)
+        anime_id = favorite_anime['mal_id']
+        print(f"\nFetching similar anime for '{favorite_anime['title']}'...")
+        collect_similar_anime(anime_id)
 
-    print("\nLoading similar anime data...")
-    df = load_similar_anime()
+        print("\nLoading similar anime data...")
+        df = load_similar_anime()
 
-    print("\nDisplaying recommendations...")
-    display_recommendations(df)
+        print("\nDisplaying recommendations...")
+        display_recommendations(df)
 
 
 if __name__ == "__main__":
