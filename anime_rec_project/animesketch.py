@@ -43,7 +43,8 @@ def collect_similar_anime(anime_id):
 
         df = pd.DataFrame(anime_list)
         engine = db.create_engine('sqlite:///similar_anime_database.db')
-        df.to_sql('similar_anime', con=engine, if_exists='replace', index=False)
+        df.to_sql('similar_anime', con=engine, if_exists='replace', index=False
+                  )
 
 
 def load_similar_anime():
