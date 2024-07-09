@@ -2,7 +2,7 @@
 
 # Anime Recommendation Project
 
-This project fetches information about an anime and its recommendations using the Jikan API and stores the data in a SQLite database using Python.
+This project fetches information about an anime and its recommendations using the Jikan API and stores the data in a SQLite database using Python and returns the reccomended animes. It is a full stack project that produces a simple user interface.
 
 ## Setup Instructions
 
@@ -13,6 +13,8 @@ Make sure you have the following libraries installed:
 - requests
 - pandas
 - SQLAlchemy
+- forms
+- flask
 
 You can install these libraries using pip:
 
@@ -31,7 +33,7 @@ A text file that shows our thought process of coming up with this project
 This file is just used to understand the parsing of these JSON dictionaries and understanding what is returned.
 
 ### animesketch.py
-This file is the main file where all the functionality of this project is shown.
+This file is the main file where all the functionality of this project is shown. If you only want to display the results in the terminal then run this python file. If you want tje same functionalities and a nice UI, run the main.py file in the anime_rec_webpage folder.
 
 1. get_anime_by_title(anime_title) 
 - Description: Fetches anime data from the Jikan API by the provided anime title and returns the anime's information.
@@ -84,3 +86,6 @@ Description: Gets user input for their favorite anime title.
 - Description: Main function to execute the steps of the project.
 - Workflow:
     - Calls functions 5, 3, 4, 6 (successively)
+
+### anime_rec_webpage
+This folder has everything you need to create a webpage for this anime reccomendation system. Users can input their favorite anime title and receive recommendations displayed on a web page.
