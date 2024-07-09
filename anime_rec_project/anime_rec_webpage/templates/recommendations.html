@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Recommended Similar Anime</h1>
+<ul>
+    {% for anime in recommendations %}
+        <li><a href="{{ anime.url }}" target="_blank">{{ anime.title }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('home') }}" class="btn btn-secondary">Go Back</a>
+{% endblock %}
